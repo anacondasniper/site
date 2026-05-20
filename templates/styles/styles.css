@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--bg: #0e0e0f;
+	--surface: #161618;
+	--border: #2a2a2e;
+	--text: #e2e2e5;
+	--muted: #6b6b78;
+	--accent: #e044e5;
+	--accent2: #e05c5c;
+	--radius: 6px;
+}
+
+html, body {
+	height: 100%;
+	background: var(--bg);
+	color: var(--text);
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 12px;
+}
+
+/* -- Layout -- */
+.app {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 48px; 1fr;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.topbar {
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	border-bottom: 1px solid var(--border);
+	background: var(--surface);
+}
+
+.topbar-title {
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	color: var(--accent);
+}
+
+/* -- Main area -- */
+
+.main {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	max-width: 780px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.home-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: auto;
+	padding: 30px 20px;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	width: fit-content;
+}

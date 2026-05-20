@@ -3,6 +3,6 @@ use templates::IndexTemplate;
 use askama::Template;
 
 fn main() {
-    let tmpl = IndexTemplate { string: "user!".to_string() };
+    let tmpl = IndexTemplate { user: "Michael".to_string() };
     println!("{}", tmpl.render().unwrap());
 }
