@@ -10,13 +10,28 @@
 <body>
 <div class="app">
     <header class="topbar">
-        <span class="topbar-title">anacondasniper.net</span>
+        <a class="topbar-title" href="/">anacondasniper.net</a>
+        <div class="nav-links">
+            <a class="text-link" href="/projects">Projects</a> /
+            <a class="text-link" href="/about">About Me</a> /
+            <a class="text-link" href="">Forums</a> /
+            <a class="text-link" href="">Contact Me</a>
+        </div>
     </header>
     <main class="main">
-		<div class ="home-box">
-			<h1>Hello {{ user }}! Welcome to anacondasniper.net</h1>
-			<p>This site is to be used as an archive of my projects and programming progress.</p>
-		</div>
+        <div class="home-box">
+            <p>{{ month }}-{{ day }}-{{ year }}   :   {{ hour }}:{{ minute }}:{{ second }}   :   Day {{ day_count }}</p>
+            <pre>
+             ____
+            / . .\
+            \  ---<
+             \  /
+   __________/ /
+-=:___________/
+			</pre>
+            <h1>Hello World! Welcome to anacondasniper.net</h1>
+            <p>This site is to be used as an archive of my projects and programming progress.</p>
+        </div>
     </main>
 </div>
 </body>

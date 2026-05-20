@@ -23,6 +23,12 @@ html, body {
 	font-size: 12px;
 }
 
+.text-link {
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.15s;
+}
+
 /* -- Layout -- */
 .app {
 	display: grid;
@@ -32,6 +38,7 @@ html, body {
 	overflow: hidden;
 }
 
+/* -- Topbar -- */
 .topbar {
 	display: flex;
 	align-items: center;
@@ -42,9 +49,33 @@ html, body {
 
 .topbar-title {
 	font-size: 16px;
-	font-weight: 600;
 	letter-spacing: 0.05em;
+	text-decoration: none;
 	color: var(--accent);
+}
+
+.topbar-title:hover {
+	color: var(--accent2);
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-left: auto;
+}
+
+.nav-links a {
+	padding: 6px 12px;
+	font-size: 13px;
+	color: var(--accent);
+	border-radius: var(--radius);
+	transition: background 0.15s;
+}
+
+.nav-links a:hover {
+	color: var(--accent2);
+	background: var(--border);
 }
 
 /* -- Main area -- */
@@ -69,4 +100,21 @@ html, body {
 	border: 1px solid var(--border);
 	border-radius: var(--radius);
 	width: fit-content;
+	transition: background 0.15s;
+}
+
+.home-box h1, p {
+	padding: 8px 5px;
+	margin: 4px 2px;
+}
+
+.home-box:hover {
+	background-color: var(--surface);
+}
+
+pre {
+	color: var(--accent);
+	font-size: 12px;
+	line-height: 1.4;
+	padding: 10px 0;
 }
