@@ -1,3 +1,8 @@
+mod templates;
+use templates::IndexTemplate;
+use askama::Template;
+
 fn main() {
-    println!("Hello, world!");
+    let tmpl = IndexTemplate { string: "user!".to_string() };
+    println!("{}", tmpl.render().unwrap());
 }
