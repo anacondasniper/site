@@ -41,7 +41,25 @@ body {
     font-size: 17px;
 }
 
+.nav-links {
+	display: flex;
+	align-items: center;
+}
+
 .topnav a:hover {
     background-color: var(--accent);
     transition: background-color 0.5s ease;
+}
+
+.topnav a.active {
+	background-color: var(--accent);
+}
+
+.messagebox {
+	background-color: var(--surface);
+	border-color: var(--border);
+	color: var(--text-hi);
+	border-radius: 8px;
+	margin: 20px;
+	padding 20px 16px;
 }
