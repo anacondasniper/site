@@ -16,4 +16,34 @@
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--bg);
+}
+
+.topnav {
+  background-color: var(--surface);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.topnav h1 {
+  color: var(--text-hi);
+  margin 0;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: var(--text-hi);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: var(--accent);
+	transition: background-color 0.5s fade;
 }
