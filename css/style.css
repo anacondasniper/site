@@ -19,6 +19,42 @@ body {
     background-color: var(--bg);
 }
 
+@media (max-width: 600px) {
+	.topnav {
+		flex-direction: column;
+		padding: 15px 0;
+	}
+
+	.topnav h1 {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+
+	.navlinks {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.topnav a {
+		padding: 10px 12px;
+		font-size: 15px;
+	}
+
+	.messagebox {
+		margin: 20px 12px;
+		padding: 40px 20px;
+	}
+
+	.messagebox h1 {
+		font-size: 26px;
+	}
+
+	.messagebox p {
+		font-size: 17px;
+		line-height: 1.5;
+	}
+}
+
 .topnav {
     background-color: var(--surface);
     overflow: hidden;
