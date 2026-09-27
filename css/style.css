@@ -1,49 +1,47 @@
 :root {
-	--bg:			#0A0F0C;
-	--surface:		#111A15;
-	--surface-hi:	#19251D;
-	--border:		#2A3A2E;
-	--text-hi: 		#F0F5F1;
-	--text-lo: 		#91A399;
-	--accent-lo: 	#35D07F;
-	--accent:		#55E897;
-	--accent-hi:	#75F0B0;
-	--success:		#4ADE80;
-	--warning:		#FBBF24;
-	--error:		#F87171;
+    --bg: #0A0F0C;
+    --surface: #111A15;
+    --surface-hi: #19251D;
+    --border: #2A3A2E;
+    --text-hi: #F0F5F1;
+    --text-lo: #91A399;
+    --accent-lo: #35D07F;
+    --accent: #55E897;
+    --accent-hi: #75F0B0;
+    --success: #4ADE80;
+    --warning: #FBBF24;
+    --error: #F87171;
 }
 
 body {
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: var(--bg);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg);
 }
 
 .topnav {
-  background-color: var(--surface);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+    background-color: var(--surface);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .topnav h1 {
-  color: var(--text-hi);
-  margin 0;
+    color: var(--text-hi);
+    margin: 0;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
-  color: var(--text-hi);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+    color: var(--text-hi);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
 .topnav a:hover {
-	background-color: var(--accent);
-	transition: background-color 0.5s fade;
+    background-color: var(--accent);
+    transition: background-color 0.5s ease;
 }
