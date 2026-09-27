@@ -1,4 +1,4 @@
-:root (
+:root {
 	--bg:			#0A0F0C;
 	--surface:		#111A15;
 	--surface-hi:	#19251D;
@@ -11,7 +11,7 @@
 	--success:		#4ADE80;
 	--warning:		#FBBF24;
 	--error:		#F87171;
-)
+}
 
 body {
 	margin: 0;
