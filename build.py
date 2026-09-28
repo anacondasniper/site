@@ -46,16 +46,18 @@ def generate_post(path):
             <a class="active" href="../../blog.html">Blog</a>
         </div>
     </div>
-    <div class="messagebox">
-        <article class="blogpost">
-            <h1>{metadata["title"]}</h1>
-            <p class="blogpost-date">
-                {metadata["date"]} · {metadata["tag"]}
-            </p>
+    <article class="blogpost">
+        <h1>{metadata["title"]}</h1>
+        <p class="blogpost-date">
+            {metadata["date"]} · {metadata["tag"]}
+        </p>
 
-            {html_content}
-        </article>
-    </div>
+        {html_content}
+
+        <a class="back-btn" href="blog.html">
+        ← Back
+        </a>
+    </article>
 </body>
 </html>
     """
