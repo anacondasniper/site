@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="httpsanacondasniper.net://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-	<title>Blog | anacondasniper.net</title>
-	<link rel="icon" href="images/icon-colored.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Blog | anacondasniper.net</title>
+    <link rel="icon" href="images/icon-colored.png">
 </head>
+
 <body>
-	<div class="topnav">
-		<h1 class="topnav-title">anacondasniper.net</h1>
-		<div class="navlinks">
-			<a href="index.html">Home</a>
-			<a href="projects.html">Projects</a>
-			<a class="active" href="blog.html">Blog</a>
-		</div>
-	</div>
-	<div class="messagebox">
-		<div class="blogchains">
-			<h2>anacondasniper blog</h2>
-			<p>
-				This is a place where I can post updates on my life and projects!
-			</p>
-			<h2>Current Blogchains</h2>
-			<div class="blogfilters">
-				<button class="active" href="#" data-tag="All">All</a>
-				<button href="#" data-tag="General">General</a>
-				<button href="#" data-tag="Animalia">Animalia</a>
-			</div>
-		</div>
-	</div>
-	<div class="blogposts"></div>
+
+    <div class="topnav">
+        <h1 class="topnav-title">anacondasniper.net</h1>
+
+        <div class="navlinks">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a class="active" href="blog.html">Blog</a>
+        </div>
+    </div>
+
+    <div class="messagebox">
+        <div class="blogchains">
+
+            <h2>anacondasniper blog</h2>
+
+            <p>
+                This is a place where I can post updates on my life and projects!
+            </p>
+
+            <h2>Current Blogchains</h2>
+
+            <div class="blogfilters">
+                <button class="active" data-tag="All">All</button>
+                <button data-tag="General">General</button>
+                <button data-tag="Animalia">Animalia</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="blogposts" class="blogposts"></div>
+
+    <script src="js/blog.js"></script>
+
 </body>
 </html>
