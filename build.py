@@ -1,5 +1,6 @@
 from pathlib import Path
 import markdown
+import json
 
 BLOG_DIR = Path("blog")
 
@@ -67,11 +68,28 @@ def generate_post(path):
 
     print(f"Generated {output_path}")
 
+    return {
+        "title": metadata["title"],
+        "date": metadata["date"],
+        "tag": metadata["tag"],
+        "url": str(output_path).replace("\\", "/")
+    }
+
 def main():
     posts = BLOG_DIR.rglob("*.md")
+    
+    post_data = []
 
     for post in posts:
-        generate_post(post)
+        data = generate_post(post)
+        post_data.append(data)
+
+    Path("posts.json").write_text(
+        json.dumps(post_data, indent=4),
+        encoding="utf-8"
+    )
+
+    print(f"generated posts.json")
 
 if __name__ == "__main__":
     main()

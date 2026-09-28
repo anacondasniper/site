@@ -148,24 +148,25 @@ body {
 }
 
 .blogfilters {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
-	margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
 }
 
-.blogfilters a {
+.blogfilters button {
     color: var(--text-hi);
-	background-color: var(--surface-hi);
-	border: 1px solid var(--border);
-	border-radius: 8px;
-	padding: 8px 14px;
-	text-decoration: none;
+    background-color: var(--surface-hi);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 15px;
+    cursor: pointer;
 }
 
-.blogfilters a:hover,
-.blogfilters a:active {
-	background-color: var(--accent);
+.blogfilters button:hover,
+.blogfilters button.active {
+    background-color: var(--accent);
     color: var(--surface);
 }
 
