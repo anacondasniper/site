@@ -81,7 +81,6 @@ def generate_post(path):
 
 def main():
     posts = BLOG_DIR.rglob("*.md")
-    post_data.sort(key=lambda p: p["date"], reverse=True)
     
     post_data = []
 
@@ -89,6 +88,7 @@ def main():
         data = generate_post(post)
         post_data.append(data)
 
+    post_data.sort(key=lambda p: p["date"], reverse=True)
     Path("posts.json").write_text(
         json.dumps(post_data, indent=4),
         encoding="utf-8"
