@@ -55,7 +55,7 @@ def generate_post(path):
 
         {html_content}
 
-        <a class="back-btn" href="blog.html">
+        <a class="back-btn" href="../../blog.html">
         ← Back
         </a>
     </article>

@@ -11,49 +11,26 @@
     --success: #4ADE80;
     --warning: #FBBF24;
     --error: #F87171;
+
+    /* spacing scale */
+    --space-1: 8px;
+    --space-2: 15px;
+    --space-3: 24px;
+    --space-4: 40px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    padding-bottom: var(--space-4);
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--bg);
 }
 
-@media (max-width: 600px) {
-	.topnav {
-		flex-direction: column;
-		padding: 15px 0;
-	}
-
-	.topnav h1 {
-		font-size: 24px;
-		margin-bottom: 10px;
-	}
-
-	.navlinks {
-		width: 100%;
-		justify-content: center;
-	}
-
-	.topnav a {
-		padding: 10px 12px;
-		font-size: 15px;
-	}
-
-	.messagebox {
-		margin: 20px 12px;
-		padding: 40px 20px;
-	}
-
-	.messagebox h1 {
-		font-size: 26px;
-	}
-
-	.messagebox p {
-		font-size: 17px;
-		line-height: 1.5;
-	}
-}
+/* ---------- Nav ---------- */
 
 .topnav {
     background-color: var(--surface);
@@ -78,8 +55,8 @@ body {
 }
 
 .navlinks {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .topnav a:hover {
@@ -89,9 +66,11 @@ body {
 }
 
 .topnav a.active {
-	background-color: var(--accent);
+    background-color: var(--accent);
     color: var(--surface);
 }
+
+/* ---------- Message box ---------- */
 
 .messagebox {
     background-color: var(--surface);
@@ -99,10 +78,9 @@ body {
     color: var(--text-hi);
     text-align: center;
     border-radius: 12px;
-    margin: 40px auto;
-    padding: 60px 40px;
+    margin: var(--space-4) auto;
+    padding: 60px var(--space-4);
     max-width: 500px;
-    box-sizing: border-box;
 }
 
 .messagebox h1 {
@@ -112,10 +90,6 @@ body {
 
 .messagebox p {
     font-size: 20px;
-}
-
-.messagebox br {
-	padding: 15px;
 }
 
 .contactlinks {
@@ -136,22 +110,35 @@ body {
     color: var(--accent);
 }
 
+/* ---------- Blog header (inside messagebox) ---------- */
+
 .blogchains {
     text-align: left;
-    max-width: 500px;
-    margin: 30px auto 0;
+    margin: 0 auto;
 }
 
 .blogchains > h2 {
     color: var(--accent);
-	text-align: center;
+    text-align: center;
+    margin: 0 0 var(--space-2);
+}
+
+.blogchains > h2:not(:first-child) {
+    margin-top: var(--space-3);
+}
+
+.blogchains p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .blogfilters {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin: 30px 0;
+    margin: var(--space-3) 0 0;
 }
 
 .blogfilters button {
@@ -170,15 +157,20 @@ body {
     color: var(--surface);
 }
 
+/* ---------- Blog list ---------- */
+
 .blogposts {
-   max-width: 500px;
-   margin: 0 auto 40px;
-   padding: 0 12px;
-   box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 12px;
 }
 
 .blogpost {
-	ackground-color: var(--surface-hi);
+    background-color: var(--surface-hi);
+    color: var(--text-hi);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 20px;
@@ -186,12 +178,13 @@ body {
 
 .blogpost h3 {
     color: var(--text-hi);
-    margin-top: 0;
+    margin: 0 0 var(--space-1);
 }
 
 .blogpost-date {
     color: var(--text-lo);
     font-size: 14px;
+    margin: 0 0 var(--space-2);
 }
 
 .blogpost p {
@@ -199,6 +192,7 @@ body {
 }
 
 .blogpost > a {
+    display: inline-block;
     color: var(--accent);
     text-decoration: none;
 }
@@ -207,13 +201,89 @@ body {
     color: var(--accent-hi);
 }
 
+/* ---------- Full post page ----------
+   Template: <article class="blogpost blogpost-full"> */
+
+.blogpost-full {
+    max-width: 700px;
+    margin: var(--space-4) auto;
+    padding: var(--space-3) 28px 28px;
+}
+
+.blogpost-full h1 {
+    color: var(--accent);
+    margin: 0 0 var(--space-1);
+}
+
+.blogpost-full h2,
+.blogpost-full h3 {
+    color: var(--text-hi);
+    margin: var(--space-3) 0 var(--space-1);
+}
+
+.blogpost-full p {
+    margin: 0 0 var(--space-2);
+    line-height: 1.7;
+}
+
+.blogpost-full .blogpost-date {
+    margin-bottom: var(--space-3);
+}
+
 .back-to-blog {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: var(--space-3);
     color: var(--accent);
     text-decoration: none;
 }
 
 .back-to-blog:hover {
     color: var(--accent-hi);
+}
+
+/* ---------- Mobile (must stay last so it overrides the base rules) ---------- */
+
+@media (max-width: 600px) {
+    .topnav {
+        flex-direction: column;
+        padding: var(--space-2) 0;
+    }
+
+    .topnav h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .navlinks {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .topnav a {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .messagebox {
+        margin: 20px 12px;
+        padding: var(--space-4) 20px;
+    }
+
+    .messagebox h1 {
+        font-size: 26px;
+    }
+
+    .messagebox p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .blogposts {
+        padding: 0 12px;
+    }
+
+    .blogpost-full {
+        margin: 20px 12px;
+        padding: 20px;
+    }
 }
