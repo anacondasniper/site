@@ -1,5 +1,5 @@
 const postsContainer = document.getElementById("blogposts");
-const filterButtons = document.querySelectorAll("#blogfilters button");
+const filterButtons = document.querySelectorAll(".blogfilters button");
 
 let posts = [];
 
