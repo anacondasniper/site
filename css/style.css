@@ -171,9 +171,10 @@ body {
 }
 
 .blogposts {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
+   max-width: 500px;
+   margin: 0 auto 40px;
+   padding: 0 12px;
+   box-sizing: border-box;
 }
 
 .blogpost {
