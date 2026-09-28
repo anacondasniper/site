@@ -1,6 +1,7 @@
 from pathlib import Path
 import markdown
 import json
+import re
 
 BLOG_DIR = Path("blog")
 
@@ -10,7 +11,7 @@ def parse_post(path):
     parts = text.split("---", 2)
 
     if (len(parts) != 3):
-        raise ValueError("Too many section splits at {path}")
+        raise ValueError(f"Missing or malformed front matter in {path}")
 
     front_matter = parts[1].strip()
     content = parts[2].strip()
@@ -26,6 +27,8 @@ def parse_post(path):
 def generate_post(path):
     metadata, content = parse_post(path)
 
+    content = re.sub(r"\A#\s+.*\n+", "", content)
+
     html_content = markdown.markdown(
         content,
         extensions=["fenced_code"]
@@ -37,6 +40,7 @@ def generate_post(path):
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/style.css">
     <title>{metadata["title"]} | anacondasniper.net</title>
+    <link rel="icon" href="../../images/icon-colored.png">
 </head>
 <body>
     <div class="topnav">
@@ -47,7 +51,7 @@ def generate_post(path):
             <a class="active" href="../../blog.html">Blog</a>
         </div>
     </div>
-    <article class="blogpost">
+    <article class="blogpost blogpost-full">
         <h1>{metadata["title"]}</h1>
         <p class="blogpost-date">
             {metadata["date"]} · {metadata["tag"]}
@@ -77,6 +81,7 @@ def generate_post(path):
 
 def main():
     posts = BLOG_DIR.rglob("*.md")
+    post_data.sort(key=lambda p: p["date"], reverse=True)
     
     post_data = []
 
