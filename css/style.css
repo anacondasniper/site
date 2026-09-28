@@ -136,3 +136,37 @@ body {
     color: var(--accent);
 }
 
+.blogchains {
+    text-align: left;
+    max-width: 500px;
+    margin: 30px auto 0;
+}
+
+.blogchains h2 {
+    color: var(--accent);
+}
+
+.blogchains ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blogchains li {
+    background-color: var(--surface-hi);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.blogchains a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--text-hi);
+    text-decoration: none;
+}
+
+.blogchains a:hover {
+    background-color: var(--accent);
+    color: var(--surface);
+}
